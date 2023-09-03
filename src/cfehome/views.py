@@ -3,11 +3,19 @@ from django.shortcuts import render
 
 
 def home_page(request, *args, **kwargs):
-    return render(request, "home.html")
+    title = "Welcome, home"
+    context = {
+        "title": title
+    }
+    return render(request, "home.html", context)
 
 
 def about_page(request, *args, **kwargs):
-    return render(request, "about.html")
+    title = "Welcome, about"
+    context = {
+        "title": title
+    }
+    return render(request, "about.html", context)
 
 
 # def home_page(*args, **kwargs):
