@@ -1,20 +1,21 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .forms import LandingPageForm
 
 
 def home_page(request, *args, **kwargs):
+    print(request.method)
     title = "Welcome, home"
-    context = {
-        "title": title
-    }
+    form = LandingPageForm()
+    # print(request.POST, request.GET)
+    print(request.POST.get("email"))
+    context = {"title": title, "form": form}
     return render(request, "home.html", context)
 
 
 def about_page(request, *args, **kwargs):
     title = "Welcome, about"
-    context = {
-        "title": title
-    }
+    context = {"title": title}
     return render(request, "about.html", context)
 
 
