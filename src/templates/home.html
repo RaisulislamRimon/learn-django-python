@@ -1,4 +1,19 @@
-<!doctype html>
+{% extends "base.html" %}
+{% block title %}
+Home - {{ block.super }}
+{% endblock %}
+{% block content %}
+<h1> Home Page </h1>
+<ul>
+    <a href="/">
+        <li>Home</li>
+    </a>
+    <a href="/about">
+        <li>About</li>
+    </a>
+</ul>
+{% endblock %}
+<!-- <!doctype html>
 <html lang="en">
 
 <head>
@@ -20,4 +35,4 @@
     </ul>
 </body>
 
-</html>
+</html> -->

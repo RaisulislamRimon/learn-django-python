@@ -4,19 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Base Home page</title>
+    <title>
+        {% block title %}
+        My First Django Project
+        {% endblock %}
+    </title>
 </head>
 
 <body>
-    <h1> Base Home Page </h1>
-    <ul>
-        <a href="/">
-            <li>Home</li>
-        </a>
-        <a href="/base">
-            <li>Base</li>
-        </a>
-    </ul>
+    {% block content %}
+    {% endblock %}
+    <!-- <h1> Base Home Page </h1>
+	}
+<ul>
+    <a href="/">
+        <li>Home</li>
+    </a>
+    <a href="/base">
+        <li>Base</li>
+    </a>
+</ul> -->
 </body>
 
 </html>
