@@ -10,7 +10,9 @@ def home_page(request, *args, **kwargs):
     # print(request.POST, request.GET)
     # print("Your email is: ", request.POST.get("email"))
     if form.is_valid():
-        print(form.cleaned_data.get("email"))
+        # print(form.cleaned_data.get("email"))  # printing email only
+        print(form.cleaned_data)
+        form = LandingPageForm()
 
     context = {"title": title, "form": form}
     return render(request, "home.html", context)
