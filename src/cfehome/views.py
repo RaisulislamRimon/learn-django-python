@@ -7,7 +7,11 @@ from django.shortcuts import render
 
 
 def home_page(request, *args, **kwargs):
-    return render(request, "index.html")
+    return render(request, "home.html")
+
+
+def base_page(request, *args, **kwargs):
+    return render(request, "base.html")
 
 
 def about_page(*args, **kwargs):
