@@ -16,8 +16,10 @@
 
 <body data-bs-theme="dark">
     {% include 'base/navbar.html' %}
-    {% block content %}
-    {% endblock %}
+    <div class="container-fluid">
+        {% block content %}
+        {% endblock %}
+    </div>
     <!-- bootstrap js cdn -->
     {% include 'base/bootstrap_js.html' %}
 </body>
