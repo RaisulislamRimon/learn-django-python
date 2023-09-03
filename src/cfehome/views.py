@@ -6,9 +6,12 @@ from .forms import LandingPageForm
 def home_page(request, *args, **kwargs):
     print(request.method)
     title = "Welcome, home"
-    form = LandingPageForm()
+    form = LandingPageForm(request.POST or None)
     # print(request.POST, request.GET)
-    print(request.POST.get("email"))
+    # print("Your email is: ", request.POST.get("email"))
+    if form.is_valid():
+        print(form.cleaned_data.get("email"))
+
     context = {"title": title, "form": form}
     return render(request, "home.html", context)
 
