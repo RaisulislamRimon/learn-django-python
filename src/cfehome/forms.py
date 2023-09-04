@@ -8,7 +8,8 @@ class LandingPageForm(forms.Form):
         # widget=forms.Textarea(attrs={"rows": 4}),
     )
     bio = forms.CharField(
-        label=f"Write your bio",
+        # label="Write your bio",
+        label="",
         required=False,
         widget=forms.Textarea(attrs={"class": "forms-control-2", "rows": 3}),
     )
