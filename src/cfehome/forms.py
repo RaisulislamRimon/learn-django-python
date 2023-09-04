@@ -2,17 +2,23 @@ from django import forms
 
 
 class LandingPageForm(forms.Form):
-    # name = forms.CharField(label="Your name")
-    name = forms.CharField(label="Write your name", required=False)
+    name = forms.CharField(
+        label="Write your name",
+        required=False,
+        # widget=forms.Textarea(attrs={"rows": 4}),
+    )
+    bio = forms.CharField(
+        label=f"Write your bio",
+        required=False,
+        widget=forms.Textarea(attrs={"class": "forms-control-2", "rows": 3}),
+    )
     # age = forms.IntegerField()
-    email = forms.EmailField()
-    email2 = forms.EmailField(label="confirm email")
+    email = forms.EmailField(label="Write your email here")
+    email2 = forms.EmailField(label="Confirm email")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        print(self.fields)
         for field in self.fields:
-            print(field)
             default_css_class = "form-control"  # bootstrap class
             new_attrs = {
                 "class": default_css_class,
