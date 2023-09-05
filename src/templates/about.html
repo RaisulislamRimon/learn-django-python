@@ -1,15 +1,13 @@
 {% extends "base.html" %}
-{% block title %}
-About - {{ block.super }}
-{% endblock %}
+{% block title %}About - {{ block.super }}{% endblock %}
 {% block content %}
-<h1>{{ title }} page</h1>
-<ul>
+  <h1>{{ title }} page</h1>
+  <ul>
     <a href="/">
-        <li>Home</li>
+      <li>Home</li>
     </a>
     <a href="/about">
-        <li>About</li>
+      <li>About</li>
     </a>
-</ul>
+  </ul>
 {% endblock %}

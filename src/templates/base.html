@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        {% block title %}
-        My First Django Project
-        {% endblock %}
-    </title>
-    <!-- bootstrap css cdn -->
-    {% include 'base/bootstrap_css.html' %}
-</head>
-<!-- <body> -->
-
-<body data-bs-theme="dark">
-    {% include 'base/navbar.html' %}
-    <div class="container-fluid">
-        {% block content %}
-        {% endblock %}
-    </div>
-    <!-- bootstrap js cdn -->
-    {% include 'base/bootstrap_js.html' %}
-</body>
-
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            {% block title %}My First Django Project{% endblock %}
+        </title>
+        <!-- bootstrap css cdn -->
+        {% include 'base/bootstrap_css.html' %}
+    </head>
+    <!-- <body> -->
+    <body data-bs-theme="dark">
+        {% include 'base/navbar.html' %}
+        <div class="container-fluid">
+            {% block content %}{% endblock %}
+        </div>
+        <!-- bootstrap js cdn -->
+        {% include 'base/bootstrap_js.html' %}
+    </body>
 </html>

@@ -1,23 +1,22 @@
 {% extends "base.html" %}
-{% block title %}
-Home - {{ block.super }}
-{% endblock %}
+{% block title %}Home - {{ block.super }}{% endblock %}
 {% block content %}
-<h1> {{ title }} Page </h1>
-<ul>
-    <a href="/">
-        <li>Home</li>
-    </a>
-    <a href="/about">
-        <li>About</li>
-    </a>
-</ul>
-<form method="POST">{% csrf_token %}
-    {{ form }}
-    <button type="submit" class="btn btn-danger">Submit</button>
-</form>
+    <h1>{{ title }} Page</h1>
+    <ul>
+        <a href="/">
+            <li>Home</li>
+        </a>
+        <a href="/about">
+            <li>About</li>
+        </a>
+    </ul>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
 {% endblock %}
-<!-- <!doctype html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
