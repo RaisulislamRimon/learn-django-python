@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path
 
 
-from . import views
+# from . import views
+from landing_pages import views as lp_views
 
 urlpatterns = [
-    path("", views.home_page),
-    path("home/", views.home_page),
-    path("about/", views.about_page),
+    path("", lp_views.home_page),
+    path("home/", lp_views.home_page),
+    path("about/", lp_views.about_page),
     path("admin/", admin.site.urls),
 ]
