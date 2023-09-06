@@ -6,16 +6,17 @@ class LandingPageForm(forms.Form):
         label="Write your name",
         required=False,
         # widget=forms.Textarea(attrs={"rows": 4}),
-    )
-    bio = forms.CharField(
-        # label="Write your bio",
-        label="",
-        required=False,
-        widget=forms.Textarea(attrs={"class": "forms-control-2", "rows": 3}),
-    )
-    # age = forms.IntegerField()
+    ) 
     email = forms.EmailField(label="Write your email here")
     email2 = forms.EmailField(label="Confirm email")
+    # bio = forms.CharField(
+    #     # label="Write your bio",
+    #     label="",
+    #     required=False,
+    #     widget=forms.Textarea(attrs={"class": "forms-control-2", "rows": 3}),
+    # )
+    # age = forms.IntegerField()
+   
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
